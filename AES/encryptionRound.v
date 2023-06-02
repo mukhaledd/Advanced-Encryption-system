@@ -1,0 +1,19 @@
+module encryptionRound#(parameter B = 128, parameter Nr = 10, parameter Nk = 4)(in,key,out);
+
+input[0:127] in;
+input[0:127] key;
+output[0:127] out;
+
+wire[0:127] next_subBytes;
+wire[0:127] next_shiftRows;
+wire[0:127] next_mixColumns;
+wire[0:127] next_round;
+
+
+Byte_sub bs (in, next_subBytes);
+shiftRows shr (next_subBytes, next_shiftRows);
+mixColumns mc (next_shiftRows, next_mixColumns);
+addRoundKey ark (next_mixColumns, key, next_round);
+
+assign out = next_round;
+endmodule
