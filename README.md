@@ -1,4 +1,4 @@
-# Advanced Encryption Decryption System
+# Advanced Encryption/Decryption System
 
 
 ##  Table of contents
@@ -15,7 +15,7 @@ converts the data back into its original form, called plaintext.
 
 
 ##  Built Using <a name = "tech"></a>
-- [Verilog].
+- [Verilog]
 
 
 ##  Applicability <a name = "applicability"></a>
